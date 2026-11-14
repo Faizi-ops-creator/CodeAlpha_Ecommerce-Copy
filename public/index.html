@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ShopEasy</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+<section id="auth-section">
+    <h2>Account</h2>
+
+    <div class="auth-container">
+
+        <form id="register-form">
+            <h3>Create Account</h3>
+
+            <input
+                type="text"
+                id="register-name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="register-email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                id="register-password"
+                placeholder="Create password (min 6 characters)"
+                required
+                minlength="6"
+            >
+
+            <button type="submit">Register</button>
+            <p id="register-message"></p>
+        </form>
+
+        <form id="login-form">
+            <h3>Login</h3>
+
+            <input
+                type="email"
+                id="login-email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                id="login-password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Login</button>
+            <p id="login-message"></p>
+        </form>
+
+    </div>
+</section>
+
+
+    <section class="hero">
+        <h2>Welcome to ShopEasy!</h2>
+        <p>Find your favourite products at amazing prices.</p>
+        <a href="#products" class="shop-btn">Shop Now</a>
+    </section>
+
+    <main><section id="product-details" style="display: none;">
+    <h2>Product Details</h2>
+
+    <div id="product-detail-content"></div>
+
+    <button onclick="closeProductDetails()">Back to Products</button>
+</section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div id="product-list" class="product-container"></div>
+        </section>
+
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total: Rs. <span id="cart-total">0</span></h3>
+            <button id="checkout-btn">Place Order</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 ShopEasy | CodeAlpha Internship Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
